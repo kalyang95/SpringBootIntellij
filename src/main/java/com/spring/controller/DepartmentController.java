@@ -33,6 +33,7 @@ public class DepartmentController {
 
     @GetMapping("/departments/{id}")
     public Department findDepartmentById(@PathVariable("id") Long departmentId) throws DepartmentNotFoundException {
+        logger.info("Inside findDepartmentById of Departmentcontroller");
         return departmentService.findDepartmentById(departmentId);
     }
 
